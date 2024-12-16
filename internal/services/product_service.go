@@ -7,11 +7,11 @@ import (
 
 // ProductService mengelola logika bisnis terkait produk
 type ProductService struct {
-	repo repositories.ProductRepository
+	repo *repositories.ProductRepository
 }
 
 // NewProductService membuat instance baru dari ProductService
-func NewProductService(repo repositories.ProductRepository) *ProductService {
+func NewProductService(repo *repositories.ProductRepository) *ProductService {
 	return &ProductService{repo: repo}
 }
 
